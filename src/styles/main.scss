@@ -74,6 +74,11 @@ body {
         font-size: 18px;
         letter-spacing: 0.9px;
         margin-bottom: 30px;
+        &_top {
+            margin-top: 18px;
+            margin-left: 0px;
+            margin-bottom: 18px;
+        }
     }
     &__title {
         font-size: 48px;
@@ -93,7 +98,7 @@ body {
         font-size: 15px;
         line-height: 24px;
         margin-bottom: 24px;
-        letter-spacing: 0.7px;
+        letter-spacing: 0.75px;
     }
     &__btn {
         display: block;
@@ -128,6 +133,26 @@ body {
         background-image: url(../img/book.svg);
         background-repeat: no-repeat;
         flex-basis: 500px;
+    }
+}
 
+.page {
+    padding-top: 161px;
+}
+
+.block-author {
+    display: flex;
+    justify-content: space-between;
+}
+.block-ava {
+    position: relative;
+    &__svg{
+        position: absolute;
+        z-index: -1;
+        right: 0;
+    }
+    &__img {
+        margin-top: 47px;
+        margin-right: 44px;
     }
 }
