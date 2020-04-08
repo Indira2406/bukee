@@ -224,15 +224,15 @@ body {
             font-size: 18px;
             font-weight: 700;
             margin-top: 31px;
-            
             ul {
                 list-style-type: none;
                 margin-left: 25px;
                 li {
                     margin: 0;
                     padding: 0;
-                    display: inline;
+                    display: inline-block;
                     margin-right: 12px;
+                    font-size: 18px;
                     i {
                         color: $accent-color;
                     }
