@@ -35,7 +35,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: $light-color;
-    padding-bottom: 156px;
+    padding-bottom: 158px;
 }
 
 .header {
@@ -45,7 +45,7 @@ body {
     max-width: 1170px;
     margin: 0 auto;
     padding-top: 38px;
-    padding-bottom: 176px;
+    padding-bottom: 171px;
     &__logo {
         display: block;
         width: 137px;
@@ -78,15 +78,19 @@ body {
 }
 .block-text {
     flex-basis: calc(93% - 500px);
+    &_width {
+        flex-basis: calc(93% - 517px);
+    }
+
     &__name{
         font-family:'Open Sans', sans-serif;
         font-size: 18px;
         letter-spacing: 0.9px;
-        margin-bottom: 40px;
+        margin-bottom: 43px;
         &_top {
-            margin-top: 18px;
-            margin-left: 0px;
-            margin-bottom: 26px;
+            margin-top: 15px;
+            margin-left: 2px;
+            margin-bottom: 34px;
         }
     }
     &__title {
@@ -98,30 +102,38 @@ body {
             display: block;
             color: $accent-color;
             font-size: 18px;
-            margin-top: 26px;
-            letter-spacing: 0.8px;
+            margin-top: 23px;
+            margin-left: 2px;
+            letter-spacing: 0.95px;
             }
         }
     &__description{
         font-family:'Open Sans', sans-serif;
         font-size: 15px;
         line-height: 24px;
-        margin-bottom: 24px;
+        margin-bottom: 25px;
         letter-spacing: 0.75px;
     }
     &__btn {
         display: block;
-        background-color: $accent-color;
+        background: linear-gradient(to top left, #65e49b, #65e4b0);
         color: $light-color;
         text-decoration: none;
         border-radius: 3px;
-        max-width: 250px;
+        max-width: 240px;
         text-align: center;
         font-size: 18px;
         margin-top: 45px;
-        padding: 12px 0;
+        padding: 13px 0 12px 0;
         letter-spacing: 0.7px;
         margin-bottom: 18px;
+        box-shadow: 0 -2px #b2f1be inset;
+        &_main {
+            box-shadow: 0 -2px #58ba88 inset;
+            max-width: 250px;
+
+        }
+        
     }
     small {
         font-family:'Open Sans', sans-serif;
@@ -130,6 +142,40 @@ body {
         letter-spacing: 0.5px;
 
     }
+    &-item {
+        &__date {
+            font-size: 15px;
+            margin-bottom: 4px;
+            letter-spacing: 0.7px;
+            font-family:'Open Sans', sans-serif;
+
+        }
+        &__title {
+            font-size: 18px;
+            letter-spacing: 0.9px;
+        }
+        &__desc {
+            font-size: 15px;
+            font-family:'Open Sans', sans-serif;
+            margin-top: 16px;
+            letter-spacing: 0.8px;
+
+        }
+        &__btn {
+            display: block;
+            background: linear-gradient(to top left, #65e49b, #65e4b0);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            max-width: 137px;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 23px;
+            padding: 12px 0 14px 3px;
+            letter-spacing: 0.7px;
+            margin-bottom: 56px;
+    }
+}   
 }
 .block-book {
     display: flex;
@@ -174,17 +220,18 @@ body {
 
 
 .page {
-    padding-top: 161px;
-    padding-bottom: 160px;
+    padding-top: 160px;
+    padding-bottom: 161px;
     &_gray {
         background-color: $bg-light-color;
-        padding-bottom: 256px;
+        padding-bottom: 257px;
+        padding-top: 163px;
     }
     &__title {
         font-size: 48px;
         text-align: center;
         margin-bottom: 25px;
-        letter-spacing: 2px;
+        letter-spacing: 1.6px;
 
     }
     &__subtitle {
@@ -201,21 +248,32 @@ body {
 }
 .block-ava {
     position: relative;
+    }
     &__svg{
         position: absolute;
         z-index: -1;
-        right: 0;
+        right: -2px;
+        &_left {
+            right: inherit;
+            left: 0;
+            top: 19px;
+        }
     }
     &__img {
         margin-top: 47px;
-        margin-right: 44px;
+        margin-right: 42px;
+        &_left {
+            margin-right: 0;
+            margin-left: 50px;
+            margin-top: 19px;
+        }
     }
 }
 
 .block-counter {
     display: flex;
     justify-content: space-around;
-    margin-top: 209px;
+    margin-top: 211px;
     
     p {
         font-family:'Open Sans', sans-serif;
@@ -252,7 +310,8 @@ body {
             font-family: 'Roboto Slab', serif;
             font-size: 18px;
             font-weight: 700;
-            margin-top: 31px;
+            margin-top: 30px;
+            margin-left: 4px;          
             ul {
                 list-style-type: none;
                 margin-left: 25px;
@@ -304,23 +363,25 @@ body {
             }
         }
         &__btn {
-            background-color: $accent-color;
+            background: linear-gradient(to top left, #65e49b, #65e4b0);
             color: $light-color;
-            border: 1px solid $accent-color;
-            padding: 13px 44px;
+            border: none;
+            width: 135px;
+            padding: 13px 0px 16px;
             font-size: 18px;
             border-radius: 3px;
-            margin-top: 28px;
+            margin-top: 27px;
+            margin-left: 4px;
             letter-spacing: 1.15px;
-
-        }
+            box-shadow: 0 -2px #adedbb inset; 
+      }
     }
 }
 
 .other-books {
     display: flex;
     justify-content: space-between;
-    margin-top: 86px;
+    margin-top: 84px;
     &__wrapper {
         display: block;
         flex-basis: 371px;
@@ -366,14 +427,14 @@ body {
         }
     }
     &-text {
-        margin-top: 35px;
+        margin-top: 33px;
         h2{
             display: block;
             text-align: center;
             letter-spacing: 2.2px;
             }
         p {
-            margin: 18px 18px;
+            margin: 17px 18px;
             font-size: 15px;
             text-align: center;
             font-family: 'Open Sans', sans-serif;
@@ -394,16 +455,21 @@ body {
     &__btn {
         display: block;
         margin: 0 auto;
-        background-color: #65e496;
-        color: #fff;
-        border: 1px solid #65e496;
-        padding: 14px 32px;
+        background: linear-gradient(to top left, #65e49b, #65e4b0);
+        color: $light-color;
+        border: none;
+        width: 220px;
+        padding: 14px 0px 16px;
         font-size: 18px;
         border-radius: 3px;
         margin-top: 82px;
         letter-spacing: 0.8px;
+        box-shadow: 0 -2px #b2f1be inset;
+
+        
+        }
     }
-}
+
 
 
   
