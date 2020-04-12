@@ -240,6 +240,25 @@ body {
         font-size: 18px;
         letter-spacing: 0.9px;
     }
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        background: linear-gradient(to top left, #65e49b, #65e4b0);
+        text-decoration: none;
+        color: $light-color;
+        border: none;
+        max-width: 220px;
+        padding: 14px 0px 16px;
+        font-size: 18px;
+        border-radius: 3px;
+        margin-top: 82px;
+        letter-spacing: 0.8px;
+        box-shadow: 0 -2px #b2f1be inset;
+        &-blog {
+            max-width: 266px;
+        }
+    }
 }
 
 .block-author {
@@ -451,26 +470,56 @@ body {
             letter-spacing: 1.3px;
         }
     }
-    &__btn {
-        display: block;
-        margin: 0 auto;
-        background: linear-gradient(to top left, #65e49b, #65e4b0);
-        color: $light-color;
-        border: none;
-        width: 220px;
-        padding: 14px 0px 16px;
-        font-size: 18px;
-        border-radius: 3px;
-        margin-top: 82px;
-        letter-spacing: 0.8px;
-        box-shadow: 0 -2px #b2f1be inset;
+ }
 
-        
-        }
+    .block-blog {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 83px;
+        &-item {
+            flex-basis: calc(35% - 330px);
+            h4 {
+                font-size: 18px;
+                margin-top: 16px;
+                letter-spacing: 0.85px;
+            }
+            &__img {
+                width: 369px;
+                height: 224px;
+                overflow: hidden;
+                position: relative;
+                img {
+                    position: absolute;
+                    width: 369px;
+                    height: 224px;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    object-fit: cover;
+                }
+            }
+            &-info {
+                font-size: 15px;
+                display: flex;
+                justify-content: flex-start;
+                font-family:'Open Sans', sans-serif;
+                margin-top: 4px;
+                letter-spacing: 0.5px;
+                &_flex {
+                    flex-basis: calc(8% - 15px);
+                }
+                a {
+                    text-decoration: none;
+                    color: $accent-color;
+                }
+            }
+            &__desc {
+                margin-top: 12px;
+                font-size: 15px;
+                font-family:'Open Sans', sans-serif;
+                letter-spacing: 0.6px;
+            }
+        } 
     }
-
-
-
-  
-
+    
     
