@@ -9,6 +9,7 @@ $light-color: #fff;
 $accent-color: #65e496;
 $bg-light-color: #f5f6fa;
 $bg-dark-color: #44444f;
+$grey-color: #9191b5;
 
 
 
@@ -224,8 +225,13 @@ body {
     padding-bottom: 161px;
     &_gray {
         background-color: $bg-light-color;
-        padding-bottom: 257px;
         padding-top: 163px;
+        padding-bottom: 257px;
+        &-2{
+            padding-bottom: 158px;
+        }
+        
+
     }
     &__title {
         font-size: 48px;
@@ -521,5 +527,61 @@ body {
             }
         } 
     }
-    
+    .block-letter {
+        display: flex;
+        justify-content: space-between;
+        &-item {
+            flex-basis: 49%;
+        }
+        &__input {
+            width: 100%;
+            background-color: $bg-dark-color;
+            border: none;
+            color: $grey-color;
+            padding: 15px 33px;
+            box-sizing: border-box;
+            border-radius: 3px;
+            letter-spacing: 0.6px;
+            
+            &:focus {
+                outline: none;
+                &::placeholder {
+                    text-indent: 600px;   
+                    transition: text-indent 0.3s ease;
+                    text-overflow:ellipsis;
+                }
+            }
+            
+
+        }
+        &__btn {
+            display: block;
+            background: linear-gradient(to top left, #65e49b, #65e4b0);
+            color: $light-color;
+            border: none;
+            width: 100%;
+            padding: 13px 38px 16px 45px;
+            font-size: 18px;
+            border-radius: 3px;
+            margin-top: 20px;
+            text-align: center;
+            letter-spacing: 1.15px;
+            box-shadow: 0 -2px #adedbb inset; 
+            &:focus {
+                outline: none;
+            }
+      }
+      &__title {
+        font-size: 48px;
+        margin-top: 7px;
+        margin-bottom: 23px;
+        letter-spacing: 1.6px;
+
+      }
+      &__text {
+        font-family:'Open Sans', sans-serif;
+        font-size: 15px;
+        letter-spacing: 0.8px;
+      }
+    }
     
