@@ -585,3 +585,71 @@ body {
       }
     }
     
+    .footer {
+        background-color: $bg-dark-color;
+        color: $grey-color;
+        padding: 160px 0;
+    }
+    .block-footer {
+        display: flex;
+        justify-content: flex-start;
+        div:nth-child(2) {
+            padding-left: 112px;
+        }
+        div:nth-child(3) {
+            padding-left: 124px;
+        }
+        &>div {
+            flex-basis: 33%;
+            box-sizing: border-box;
+
+        }
+        &__logo {
+            display: block;
+            width: 137px;
+            height: 28px;
+            background-image: url(../img/Logofooter.svg);          
+        }
+        &__desc {
+            font-family:'Open Sans', sans-serif;
+            margin-top: 26px;
+            letter-spacing: 0.6px;
+        }        
+        &__copyright {
+            margin-top: 24px;
+            letter-spacing: 0.65px; 
+           }
+        &__title {
+            color: $accent-color;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-top: 9px;
+            letter-spacing: 0.7px;
+
+        }
+        &__list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 19px;
+            line-height: 1.9;
+            letter-spacing: 0.6px;
+            &_2 {
+                margin-top: 22px;
+                line-height: 1.65;
+            }
+           
+
+        }
+        &__social {
+            display: flex;
+            list-style-type: none;
+            margin-top: 10px;
+            letter-spacing: 3px;
+            li {
+                margin-right: 10px;
+                a {
+                    color: $accent-color;
+
+                }            }
+        }
+    }
