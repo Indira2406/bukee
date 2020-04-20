@@ -43,6 +43,11 @@
                     <li class="header-list__item"><a href="" class="header-list__link">Clients</a></li>
                     <li class="header-list__item"><a href="" class="header-list__link">Contact</a></li>
                 </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </header>
             <div class="wrap">
                 <div class="block-book">
@@ -125,7 +130,20 @@
                             <li>Consectetur adipisicing elit</li>
                             <li>Labore et dolore magna</li>
                         </ol>
-                        <button class="block-about-table__btn">More</button>
+
+                        <ol class="block-about-table__list block-about-table__list_next" id="nextContentList">
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipisicing elit</li>
+                            <li>Labore et dolore magna</li>
+                            <li>Consectetur adipisicing elit</li>
+                            <li>Labore et dolore magna</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipisicing elit</li>
+                            <li>Labore et dolore magna</li>
+                            <li>Consectetur adipisicing elit</li>
+                            <li>Labore et dolore magna</li>
+                        </ol>
+                        <button id="nextContents" class="block-about-table__btn">More</button>
                     </div>
                 </div>
             </div>
@@ -341,7 +359,26 @@
         </div>
         <script src="js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+         <script>
+             window.addEventListener('DOMContentLoaded', () => {
+            const menu = document.querySelector('.header-list'),
+            menuItem = document.querySelectorAll('.header-list__item'),
+            hamburger = document.querySelector('.hamburger');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('hamburger_active');
+                menu.classList.toggle('header-list_active');
+            });
+
+            menuItem.forEach(item => {
+                item.addEventListener('click', () => {
+                    hamburger.classList.toggle('hamburger_active');
+                    menu.classList.toggle('menu_active');
+                });
+            });
+        });
+         </script>
         <script>
             $(document).ready(function(){
             $('.block-carousel').slick({
@@ -351,5 +388,11 @@
             });
         </script>
         <script src="js/vendor.js"></script>
+        <script>
+            $("#nextContents").click(function(){
+            $("#nextContentList").fadeIn();
+            $("#nextContents").hide();
+            });
+        </script>
     </body>
 </html>

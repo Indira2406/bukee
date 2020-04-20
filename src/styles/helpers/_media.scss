@@ -1,0 +1,229 @@
+$light-color: #fff;
+$accent-color: #65e496;
+$bg-light-color: #f5f6fa;
+$bg-dark-color: #44444f;
+$grey-color: #9191b5;
+.header {
+    @media(max-width: 900px) {
+        flex-direction: column;
+        padding-bottom: 80px;
+    }
+    @media(max-width: 750px) {
+        padding-bottom: 50px;;
+    }
+}
+.header-list {
+    @media(max-width: 750px) {
+        position: fixed;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		left: -100%;
+		width: 50%;
+		height: 100vh;
+		padding: 20px 15px;
+		background-color: rgba(0,0,0, .8);
+        transition: 0.6s all;
+        &_active {
+            left: 0;
+        }
+        &__item {
+			padding-right: 0;
+			border: none;
+            margin: 10px 0;
+    }
+		&__link { 
+			font-size: 20px;
+    }
+}
+}
+.hamburger {
+    @media (max-width: 750px) {
+        display: block;
+        position: absolute;
+        right: 19px;
+        top: 40px;
+        width: 33px;
+        height: 24px;
+        span {
+            display: block;
+            height: 4px;
+            width: 100%;
+            background-color: $accent-color;
+            margin-bottom: 4px;
+            transition: 0.5s all;
+        }
+        &_active {
+            span {
+                margin-bottom: -4px;
+                &:nth-child(1) {
+                    transform: translateY(3px) rotate(-45deg);
+                }
+                &:nth-child(2) {
+                    display: none;     
+                    }
+                &:nth-child(3) {
+                    transform: translateY(3px) rotate(45deg);
+                }       
+            }
+        }
+    }
+}
+.block-text {
+    @media(max-width:1020px) {
+        flex-basis: 48%;
+        &_width {
+            flex-basis: 61%;
+        } 
+    }
+    @media(max-width: 900px) {
+        text-align: center;
+        &__title {
+            font-size: 42px;
+        }
+        &__btn {
+            display: block;
+            margin: 45px auto 16px;
+        }
+        &_width {
+            flex-basis: 53%;
+            text-align: left;
+        }
+    }
+}    
+
+.block-book {
+    @media(max-width:1020px) {
+        justify-content: space-around;
+        &__title{
+            left: 80px;
+        }
+    }
+    @media(max-width:900px) {
+        flex-direction: column-reverse;
+        &-demo {
+            margin: 50px auto;
+            flex-basis: 640px;
+        }
+    }
+}
+
+.page {
+    @media(max-width:1020px) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        &__title {
+            font-size: 45px;
+        }
+        &__svg {
+            display: none;
+        }
+    }
+    @media(max-width:900px) {
+        &__title {
+            font-size: 42px;
+        }
+        &__btn {
+            &-blog {
+                margin-top: 30px;
+
+            }
+        }
+    }
+}
+
+.page-carousel {
+    @media(max-width:1020px) {
+        background-color: $bg-dark-color; 
+
+    }
+}
+
+.block-ava {
+    @media(max-width:1020px) {
+        &_left {
+            margin-top: 118px;
+        }
+        &__svg{
+        width: 300px;
+        height: 415px;
+        }
+        &__img {
+            width: 300px;
+        }
+    }
+    @media(max-width: 900px) {
+        margin-top: 85px;
+        &_left {
+                margin-top: 160px;
+        }
+    }
+}
+.block-counter {
+    @media(max-width: 1020px) {
+        margin-top: 150px;
+    }
+    @media (max-width: 900px) {
+        margin-top: 100px; 
+        }
+}
+.block-about {
+    @media(max-width: 1020px) {
+        margin: 82px auto 0;
+        max-width: 750px;
+        flex-direction: column;
+        &-text {
+            flex-basis: 100%;
+        }
+        &-table {
+            flex-basis: 100%;
+            margin-top: 40px;
+        }
+    }
+}
+.other-books {
+    @media(max-width:1020px) {
+        justify-content: center;
+        &__wrapper {
+            margin-top: 30px;
+        }
+    }
+    @media (max-width: 900px) {
+        flex-wrap: wrap;
+    }
+}
+.block-blog {
+    @media(max-width:900px) {
+        flex-direction: column;
+        margin: 85px auto 0;
+        max-width: 600px;
+        &-item {
+            margin-bottom: 85px;                  
+        }
+    }
+}
+.block-letter {
+    @media(max-width:1020px) {
+        text-align: center;
+        &__title {
+            font-size: 45px;
+        }
+        &-item {
+            margin-bottom: 30px;
+        }
+    }    
+    @media(max-width:900px) {
+        &_input{
+            margin-top: 35px;
+        }
+    }
+}
+.block-footer {
+    @media(max-width: 900px) {
+        &>div {
+            flex-basis: 44%;
+
+        }
+    }
+}

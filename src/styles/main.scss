@@ -5,6 +5,8 @@
 @import "base/fonts";
 @import "base/general";
 @import "../blocks/modules";
+@import "helpers/media";
+
 $light-color: #fff;
 $accent-color: #65e496;
 $bg-light-color: #f5f6fa;
@@ -48,13 +50,7 @@ body {
     max-width: 1170px;
     margin: 0 auto;
     padding: 38px 15px 171px 15px;
-    @media(max-width: 920px) {
-        flex-direction: column;
-        padding-bottom: 100px;
-    }
-    @media(max-width: 750px) {
-        padding-bottom: 50px;;
-    }
+    
     &__logo {
         display: block;
         width: 137px;
@@ -85,11 +81,11 @@ body {
         }
     }
 }
+.hamburger {
+    display: none;
+}
 .block-text {
-    flex-basis: calc(93% - 500px);
-    @media(max-width:1020px) {
-        flex-basis: 48%;
-    }
+    flex-basis: 50.7%;
     @media(max-width:750px) {
         flex-basis: 57%;
     }
@@ -99,19 +95,14 @@ body {
             display: block;
             margin: 20px auto 0;
         }
-    }
-    
+    }    
     &_width {
         flex-basis: calc(93% - 517px);
-        @media(max-width:1020px) {
-            flex-basis: calc(93% - 315px);
-        }
         @media(max-width:750px) {
             flex-basis: 85%;
             display: block;
             margin: 30px auto 0;
-        }
-        
+        } 
     }
 
     &__name{
@@ -136,9 +127,6 @@ body {
         letter-spacing: 1.5px;
         margin-bottom: 37px;
         line-height: 50px;
-        @media(max-width:900px ){
-            font-size: 45px;
-        }
         @media(max-width:750px ){
             font-size: 38px;
             margin-bottom: 30px;
@@ -181,7 +169,7 @@ body {
         margin-top: 45px;
         padding: 13px 0 12px 0;
         letter-spacing: 0.7px;
-        margin-bottom: 18px;
+        margin-bottom: 16px;
         box-shadow: 0 -2px #b2f1be inset;
         &_main {
             box-shadow: 0 -2px #58ba88 inset;
@@ -234,25 +222,16 @@ body {
 }
 .block-book {
     display: flex;
-    justify-content: flex-start;
-    @media(max-width:1020px) {
-        justify-content: space-around;
-    }
-    @media(max-width:750px) {
-        flex-wrap: wrap;    }
-  
+    justify-content: flex-start;  
     &-demo {
         position: relative;
         display: block;
         width: 447px;
         height: 643px;
-        background-image: url(../img/book.jpg);
+        background-image: url(../img/book.png);
         background-repeat: no-repeat;
-        flex-basis: 42.6%;
-        @media(max-width:750px ) {
-            flex-basis: 80%;
-
-        }
+        flex-basis: 499px;
+    
         &__title{
             font-size: 36px;
             text-transform: uppercase;
@@ -260,10 +239,6 @@ body {
             top: 118px;
             left: 130px;
             letter-spacing: 1.2px;
-            @media(max-width:900px ) {
-                left: 80px;
-
-            }
             span {
                 display: block;
                 font-family:'Open Sans', sans-serif;
@@ -291,10 +266,6 @@ body {
     position: relative;
     padding-top: 160px;
     padding-bottom: 161px;
-    @media(max-width:1020px) {
-        padding-top: 120px;
-        padding-bottom: 120px;
-    }
     @media(max-width:750px) {
         padding-top: 80px;
         padding-bottom: 80px;
@@ -314,9 +285,6 @@ body {
         text-align: center;
         margin-bottom: 25px;
         letter-spacing: 1.6px;
-        @media(max-width:1020px ){
-            font-size: 45px;
-        }
         @media(max-width:750px ){
             font-size: 38px;
         }
@@ -352,14 +320,7 @@ body {
         width: 100%;
         z-index: -1;
         min-height: 694px;
-        @media(max-width: 1020px) {
-            display: none;
-        }
     }
-}
-.page-carousel {
-    @media(max-width: 1020px) {
-    background-color: $bg-dark-color;    }
 }
 
 .block-author {
@@ -369,13 +330,7 @@ body {
 }
 .block-ava {
     position: relative;
-    @media(max-width: 900px) {
-        margin-top: 100px;
-    }
     &_left {
-        @media(max-width: 900px) {
-            margin-top: 160px;
-        }
         @media(max-width: 750px) {
             margin: 0 auto;
         }
@@ -384,10 +339,6 @@ body {
         position: absolute;
         z-index: -1;
         right: -2px;
-        @media(max-width:1020px) {
-            width: 300px;
-            height: 415px;
-        }
         @media(max-width:750px){
             width: 250px;
             height: 365px;
@@ -401,9 +352,6 @@ body {
     &__img {
         margin-top: 47px;
         margin-right: 42px;
-        @media (max-width: 1020px) {
-            width: 300px;
-        }
         @media (max-width: 750px) {
             width: 250px;
         }
@@ -419,11 +367,7 @@ body {
 .block-counter {
     display: flex;
     justify-content: space-around;
-    margin-top: 211px;
-    @media (max-width: 900px) {
-        margin-top: 100px; 
-        }
-    
+    margin-top: 211px;    
     p {
         font-family:'Open Sans', sans-serif;
         text-align: center;
@@ -451,11 +395,6 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 82px;
-    @media(max-width:1020px) {
-        margin: 82px auto 0;
-        max-width: 750px;
-        flex-direction: column;
-        }
         @media(max-width:750px) {
             margin: 50px auto 0;
             max-width: 590px;
@@ -470,9 +409,6 @@ body {
     }
     &-text {
         flex-basis: calc(100% - 690px);
-        @media(max-width:1020px) {
-            flex-basis: 100%;
-        }
         &__featured {
             display: flex;
             justify-content: flex-start;
@@ -499,11 +435,7 @@ body {
         
     }
     &-table {
-        flex-basis: 570px;
-        @media(max-width:1020px) {
-            flex-basis: 100%;
-            margin-top: 40px;
-        }
+        flex-basis: 580px;
         &__list {
             margin: 0;
             padding: 0;
@@ -535,7 +467,21 @@ body {
                     line-height: 11px
                 }
             }
+        &_next {
+            counter-reset: list 10;
+            position: relative;
+            display: none;
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100px;
+                height: 2px;
+                background-color: $accent-color;
+                top: -10px;
+            }
         }
+    }  
         &__btn {
             background: linear-gradient(to top left, #65e49b, #65e4b0);
             color: $light-color;
@@ -548,6 +494,9 @@ body {
             margin-left: 4px;
             letter-spacing: 1.15px;
             box-shadow: 0 -2px #adedbb inset; 
+            &:focus {
+                outline: none;
+            }
       }
     }
 }
@@ -556,19 +505,12 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 84px;
-    @media(max-width:1020px) {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
     @media(max-width:750px) {
         margin-top: 0;
     }
     &__wrapper {
         display: block;
         flex-basis: 371px;
-        @media(max-width:1020px) {
-            margin-top: 50px;
-        }
         @media(max-width:750px) {
             display: flex;
             align-items: center;
@@ -650,16 +592,8 @@ body {
         display: flex;
         justify-content: space-between;
         margin-top: 83px;
-        @media(max-width:900px) {
-            flex-direction: column;
-            margin: 85px auto 0;
-            max-width: 600px;
-        }
         &-item {
             flex-basis: 32%;
-            @media(max-width:900px) {
-            margin-bottom: 85px;                  
-         }
             h4 {
                 font-size: 18px;
                 margin-top: 16px;
@@ -721,10 +655,7 @@ body {
             box-sizing: border-box;
             border-radius: 3px;
             letter-spacing: 0.6px;
-            @media(max-width:900px){
-                margin-top: 35px;
-            }
-            
+                        
             &:focus {
                 outline: none;
                 &::placeholder {
@@ -814,11 +745,7 @@ body {
         }
         &>div {
             flex-basis: 33%;
-            box-sizing: border-box;
-            @media(max-width: 900px) {
-                flex-basis: 44%;
-            }
-           
+            box-sizing: border-box;           
 
         }
         &__logo {
